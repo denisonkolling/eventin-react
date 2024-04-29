@@ -17,7 +17,7 @@ interface Attendee {
 	name: string;
 	email: string;
 	createdAt: string;
-	checkedInAt: string | null;
+	checkIn: string | null;
 }
 
 const AttendeeList = () => {
@@ -146,7 +146,7 @@ const AttendeeList = () => {
 								</TableCell>
 								<TableCell>{dayjs().to(ateendee.createdAt)}</TableCell>
 								<TableCell>
-									{ateendee.checkedInAt === null ? <span className="text-zinc-400">Não fez check-in</span> : dayjs().to(ateendee.checkedInAt)}
+									{ateendee.checkIn === null ? <span className="text-zinc-400">Não fez check-in</span> : dayjs().to(ateendee.checkIn)}
 								</TableCell>
 								<TableCell>
 									<IconButton transparent className="bg-black/20 border border-white/10 rounded-md p-1.5">
