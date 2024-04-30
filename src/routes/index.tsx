@@ -8,8 +8,10 @@ const RoutesApp = () => {
 		<BrowserRouter>
 			<Fragment>
 				<Routes>
-					<Route path="/event-attendees-list" element={<EventAttendeesList />} />
+					<Route path="/" element={<Login />} />
+					<Route path="*" element={<Login />} />
 					<Route path="/login" element={<Login />} />
+					<Route path="/event-attendees-list" element={<EventAttendeesList />} />
 				</Routes>
 			</Fragment>
 		</BrowserRouter>
